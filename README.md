@@ -9,6 +9,8 @@ This version includes visual enhancements:
 - a "Surprise me" button that cycles messages and emits particles
 - a Dark/Light theme toggle (top-right)
 
+- language toggle: English (`EN`), Spanish (`ES`), and Hebrew (`HE`) — Hebrew sets right-to-left layout
+
 To serve with Python (if installed):
 
 ```powershell

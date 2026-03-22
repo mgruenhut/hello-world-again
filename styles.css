@@ -20,3 +20,8 @@ html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe U
 /* dark theme */
 :root.dark{--bg1:#0f172a;--bg2:#071032;--card:#071133aa;--text:#e6eef9;--muted:#cdd6e6}
 @media (max-width:520px){.greet{font-size:2rem;padding:0 8px}.card{padding:24px 18px}}
+
+.lang-controls{display:inline-flex;gap:8px;align-items:center}
+.lang-controls .btn{padding:8px 10px;border-radius:8px;font-weight:600}
+.btn.active{background:#111;color:#fff}
+
