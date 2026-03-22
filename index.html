@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>hello world — friendly</title>
+  <style>
+    :root{--bg1:#ff9a9e;--bg2:#fad0c4;--card:#ffffffcc}
+    html,body{height:100%;margin:0;font-family:system-ui,Segoe UI,Roboto,Arial;background:linear-gradient(135deg,var(--bg1),var(--bg2));}
+    .wrap{min-height:100%;display:flex;align-items:center;justify-content:center;padding:32px}
+    .card{background:var(--card);backdrop-filter:blur(6px);border-radius:16px;padding:36px 44px;text-align:center;box-shadow:0 8px 30px rgba(0,0,0,0.12);max-width:720px}
+    .greet{font-size:3.25rem;margin:0 0 8px;display:flex;align-items:center;justify-content:center;gap:12px}
+    .wave{display:inline-block;transform-origin:70% 70%;animation:wave 2s infinite}
+    @keyframes wave{0%{transform:rotate(0)}15%{transform:rotate(14deg)}30%{transform:rotate(-8deg)}45%{transform:rotate(14deg)}60%{transform:rotate(-4deg)}100%{transform:rotate(0)}}
+    .sub{color:#444;margin:0 0 18px;font-size:1.05rem}
+    .btn{background:#111;color:#fff;border:0;padding:10px 16px;border-radius:10px;cursor:pointer;font-size:0.95rem}
+    .small{margin-top:14px;color:#3338;font-size:0.9rem}
+    .highlight{background:linear-gradient(90deg,#ffecb3,#ffd1dc);padding:6px 12px;border-radius:999px}
+    @media (max-width:520px){.greet{font-size:2rem;padding:0 8px}}
+  </style>
+</head>
+<body>
+
+  <div class="bg" aria-hidden="true">
+    <div class="blob"></div>
+    <div class="blob two"></div>
+  </div>
+
+  <div class="wrap">
+    <div class="card">
+      <h1 class="greet"><span class="wave">👋</span><span id="line">hello world</span></h1>
+      <p class="sub">A tiny friendly page — <span class="highlight">say hi</span> or click the buttons for surprises.</p>
+      <div class="controls">
+        <button id="surprise" class="btn">Surprise me</button>
+        <button id="theme" class="btn ghost">Dark</button>
+      </div>
+      <p class="small">Open this file directly or serve the folder locally.</p>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
+

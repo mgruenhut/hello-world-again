@@ -1,0 +1,22 @@
+:root{--bg1:#ff9a9e;--bg2:#fad0c4;--card:#ffffffcc;--text:#111;--muted:#444}
+html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,Arial;background:linear-gradient(135deg,var(--bg1),var(--bg2));color:var(--text)}
+.bg{position:fixed;inset:0;overflow:hidden;z-index:0}
+.blob{position:absolute;width:70vmax;height:70vmax;left:-10vmax;top:-20vmax;background:radial-gradient(circle at 30% 30%,#ffd6e0,transparent 40%),radial-gradient(circle at 70% 70%,#ffd9b3,transparent 40%);filter:blur(60px);opacity:0.9;transform:rotate(10deg);animation:blob 12s infinite alternate}
+.blob.two{left:auto;right:-15vmax;top:10vmax;background:radial-gradient(circle at 20% 40%,#cfe8ff,transparent 40%),radial-gradient(circle at 80% 20%,#d7ffd6,transparent 40%);filter:blur(80px);opacity:0.85;animation:blob 18s infinite alternate-reverse}
+@keyframes blob{0%{transform:translateY(0) scale(1) rotate(0)}100%{transform:translateY(6vh) scale(1.08) rotate(6deg)}}
+.wrap{position:relative;z-index:1;min-height:100%;display:flex;align-items:center;justify-content:center;padding:32px}
+.card{background:var(--card);backdrop-filter:blur(8px);border-radius:18px;padding:36px 44px;text-align:center;box-shadow:0 12px 40px rgba(0,0,0,0.12);max-width:840px;min-width:280px}
+.greet{font-size:3.25rem;margin:0 0 8px;display:flex;align-items:center;justify-content:center;gap:12px}
+.wave{display:inline-block;transform-origin:70% 70%;animation:wave 2s infinite}
+.sub{color:var(--muted);margin:0 0 18px;font-size:1.05rem}
+.controls{display:flex;gap:10px;justify-content:center}
+.btn{background:#111;color:#fff;border:0;padding:10px 16px;border-radius:10px;cursor:pointer;font-size:0.95rem;box-shadow:0 6px 18px rgba(0,0,0,0.12)}
+.btn.ghost{background:transparent;color:var(--text);border:1px solid rgba(0,0,0,0.08)}
+.small{margin-top:14px;color:#3338;font-size:0.9rem}
+.highlight{background:linear-gradient(90deg,#ffecb3,#ffd1dc);padding:6px 12px;border-radius:999px}
+/* particle */
+.particle{position:fixed;pointer-events:none;z-index:2;font-size:18px;opacity:0;transform:translateY(0) scale(1);animation:particle 1400ms ease-out forwards}
+@keyframes particle{0%{opacity:1;transform:translateY(0) scale(1)}100%{opacity:0;transform:translateY(-120px) scale(1.4)}}
+/* dark theme */
+:root.dark{--bg1:#0f172a;--bg2:#071032;--card:#071133aa;--text:#e6eef9;--muted:#cdd6e6}
+@media (max-width:520px){.greet{font-size:2rem;padding:0 8px}.card{padding:24px 18px}}
